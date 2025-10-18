@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Arcade - Galaga - Miscellaneous - General Sprites_0: -5770477964040028471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
