@@ -1,20 +1,33 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerControl : MonoBehaviour
+public class playerControler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+
+    private Rigidbody2D rb;
+    private bool isGrounded;
+
     void Start()
     {
-        playerRb = GetComponent<Rigidbody2D>();
-        playerInput = GetCoponent<PlayerInput>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Vector2 moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
-        playerRb.LinearVelocity = new Vector2(moveInput.x * SpeedTreeWindAsset, playerRb
+        // Movimiento horizontal
+        float moveInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        // Verificar si está en el suelo
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+
+        // Saltar
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
     }
 }
