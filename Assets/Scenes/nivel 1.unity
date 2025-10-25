@@ -332,17 +332,17 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.875, y: 2}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 1.875, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.9375, y: 0.375}
-      - {x: 0.4375, y: 1}
-      - {x: -0.3125, y: 1}
-      - {x: -0.9375, y: 0.375}
+    - - {x: 0.95088226, y: 0.0039170682}
+      - {x: 0.080107, y: 1.005098}
+      - {x: -0.076080844, y: 1.0045812}
+      - {x: -0.955343, y: 0.017660886}
       - {x: -0.9375, y: -1}
       - {x: 0.9375, y: -1}
   m_UseDelaunayMesh: 0
@@ -495,8 +495,8 @@ Transform:
   m_GameObject: {fileID: 1938902577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 3.25, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.0099993, y: 3.25, z: -10}
+  m_LocalScale: {x: 12.424009, y: 10.213379, z: 1.601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -576,6 +576,18 @@ PrefabInstance:
     - target: {fileID: 6432775879937732035, guid: cbedb1db9074e6e4f86caae358c90b37, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538656516465384020, guid: cbedb1db9074e6e4f86caae358c90b37, type: 3}
+      propertyPath: m_Size.x
+      value: 1.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538656516465384020, guid: cbedb1db9074e6e4f86caae358c90b37, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1704748339, guid: df140c00fe4b56446a90a293ca3e7e52, type: 3}
+    - target: {fileID: 6538656516465384020, guid: cbedb1db9074e6e4f86caae358c90b37, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -719,28 +719,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Galaga_IDLE
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 316
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67cd046085659d24aaf04d84eb58effe
-      internalID: -1474505654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_7
       rect:
         serializedVersion: 2
@@ -758,116 +736,6 @@ TextureImporter:
       bones: []
       spriteID: 40599864d49cb4a4283c56408c62b145
       internalID: 1770074291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_8
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 316
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 543e0f4767d3147409892d1011065f2c
-      internalID: -2142531378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_9
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 316
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f81e83ba0b206b4282efef58f3412db
-      internalID: 945404897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 316
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 766f093fca38c1542b912764fa1d95de
-      internalID: -1601550486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_11
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 316
-        width: 16
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1013bf0f71260034b9b6dc5d2509d37e
-      internalID: -2125824409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_12
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 317
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f6fc70974c68ca4084ebf68376965bd
-      internalID: -2087090717
       vertices: []
       indices: 
       edges: []
@@ -898,12 +766,12 @@ TextureImporter:
       name: galaga_sheet_trans1_14
       rect:
         serializedVersion: 2
-        x: 241
-        y: 324
-        width: 7
-        height: 6
+        x: 232
+        y: 187
+        width: 8
+        height: 3
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -921,9 +789,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 241
-        y: 303
+        y: 302
         width: 30
-        height: 26
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,28 +802,6 @@ TextureImporter:
       bones: []
       spriteID: 15e01cbe725189146a099ce5bdd004ab
       internalID: -46120161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_16
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 324
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b02ab26fc14c82b4fa4820327a1fa85b
-      internalID: -326659233
       vertices: []
       indices: 
       edges: []
@@ -983,35 +829,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: galaga_sheet_trans1_18
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 324
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 363a4c2a004cbc241b6d9e3eee6648de
-      internalID: -566876404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_19
       rect:
         serializedVersion: 2
         x: 321
-        y: 303
-        width: 44
-        height: 26
+        y: 302
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1030,12 +854,12 @@ TextureImporter:
       name: galaga_sheet_trans1_20
       rect:
         serializedVersion: 2
-        x: 344
-        y: 324
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 362
+        y: 320
+        width: 3
+        height: 8
+      alignment: 9
+      pivot: {x: 0.34854126, y: 0.5963745}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1203,57 +1027,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: galaga_sheet_trans1_28
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 302
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0793c8642bf95a0419bdf772bca45334
-      internalID: 629090372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_29
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 302
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32b121d2358949b47b4053971548d1eb
-      internalID: -8522298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_30
       rect:
         serializedVersion: 2
-        x: 321
-        y: 302
-        width: 7
-        height: 6
+        x: 360
+        y: 275
+        width: 8
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1272,10 +1052,10 @@ TextureImporter:
       name: galaga_sheet_trans1_31
       rect:
         serializedVersion: 2
-        x: 344
-        y: 302
+        x: 360
+        y: 296
         width: 7
-        height: 6
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1286,28 +1066,6 @@ TextureImporter:
       bones: []
       spriteID: 1380052c1e0b1bf4cb5ae1a3a588b4fe
       internalID: 523978186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_32
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 275
-        width: 8
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52266a84b2b89514287d7d11196030fa
-      internalID: 1110137553
       vertices: []
       indices: 
       edges: []
@@ -3139,28 +2897,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: galaga_sheet_trans1_116
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 184
-        width: 38
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5eca4fd1337a08f43a18bf950fef9865
-      internalID: 842810821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_117
       rect:
         serializedVersion: 2
@@ -3183,35 +2919,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: galaga_sheet_trans1_118
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 157
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a16bbd53b8c6d94fb48e0c1ba0b97b3
-      internalID: -1249941298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_119
       rect:
         serializedVersion: 2
         x: 224
         y: 148
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3222,72 +2936,6 @@ TextureImporter:
       bones: []
       spriteID: a6a21c0f346b82e41b803719e8ef4620
       internalID: -1093558686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_120
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 160
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f3048587f02a1241ae65e8c74be09b1
-      internalID: -1643316811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_121
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 155
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec71f8bec22f49444b81ea89f7de86d2
-      internalID: -845859695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galaga_sheet_trans1_122
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 141
-        width: 110
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24783bf42e5f8bf4a9093c77f1208127
-      internalID: 1377881029
       vertices: []
       indices: 
       edges: []
@@ -4093,7 +3741,7 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4107,28 +3755,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: galaga_sheet_trans1_160
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 316
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c5145288d9d6f74a9cfd0bb209b2906
-      internalID: 814910594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: galaga_sheet_trans1_6
       rect:
         serializedVersion: 2
@@ -4137,7 +3763,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4156,10 +3782,10 @@ TextureImporter:
         serializedVersion: 2
         x: 104
         y: 316
-        width: 15
-        height: 15
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4179,9 +3805,9 @@ TextureImporter:
         x: 128
         y: 316
         width: 15
-        height: 15
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4201,9 +3827,9 @@ TextureImporter:
         x: 152
         y: 316
         width: 16
-        height: 15
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4225,7 +3851,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4234,6 +3860,116 @@ TextureImporter:
       bones: []
       spriteID: 41fa36026e8061f4c9499991ebc9737e
       internalID: -1966713840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: galaga_sheet_trans1_8
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 204
+        width: 46
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765aa619dfad9444499f2d64f3abbf0a
+      internalID: -2142531378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: galaga_sheet_trans1_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 142
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ed39f4f44a6e84db985b1f84e9986e
+      internalID: 945404897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: galaga_sheet_trans1_10
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 141
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a967fe1fe6a995745a2fc203aba31635
+      internalID: -1601550486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: galaga_sheet_trans1_11
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 184
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab0676c26e8b8241ab626be75d79fcc
+      internalID: -2125824409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: galaga_sheet_trans1_12
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 184
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36450ca281320d047a0305e8f14d685f
+      internalID: -2087090717
       vertices: []
       indices: 
       edges: []
