@@ -1,7 +1,13 @@
+using System;
+using UnityEditorInternal;
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+
 
 public class playerControler : MonoBehaviour
 {
+    public GameObject BulletPrefab;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
@@ -19,7 +25,7 @@ public class playerControler : MonoBehaviour
     {
         // Movimiento horizontal
         float moveInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new UnityEngine.Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         // Verificar si está en el suelo
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
@@ -27,7 +33,16 @@ public class playerControler : MonoBehaviour
         // Saltar
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
         }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            Shoot();
+        }
+    }
+    private void Shoot()
+    {
+        Instantiate(BulletPrefab, transform.position, Quaternion.identity);
     }
 }
