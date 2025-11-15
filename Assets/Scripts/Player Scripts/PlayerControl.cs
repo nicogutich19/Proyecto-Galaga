@@ -5,7 +5,7 @@ using System.Collections;
 using UnityEngine;
 
 
-public class playerControler : MonoBehaviour
+public class PlayerControler : MonoBehaviour
 {
     public GameObject BulletPrefab;
     public float moveSpeed = 5f;
