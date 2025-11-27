@@ -676,7 +676,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6706250640564487772, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
-  firePoint: {fileID: 66123513552712823, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
+  firePoint: {fileID: 1864689378}
+--- !u!4 &1347920394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9163581640738414474, guid: 26df16dfa9e4cba4f82febbcc7f6b9f2, type: 3}
+  m_PrefabInstance: {fileID: 1170526563234029403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1386108891
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +768,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1864689377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864689378}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864689378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864689377}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1347920394}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938902577
 GameObject:
@@ -967,7 +1003,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9163581640738414474, guid: 26df16dfa9e4cba4f82febbcc7f6b9f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1864689378}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5465616542725883664, guid: 26df16dfa9e4cba4f82febbcc7f6b9f2, type: 3}
       insertIndex: -1
@@ -1078,9 +1117,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 66123513552712823, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 66811761228107404, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 205352542726547657, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747230097110102160, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
+      propertyPath: LifeTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6706250640564487772, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
       propertyPath: m_Name

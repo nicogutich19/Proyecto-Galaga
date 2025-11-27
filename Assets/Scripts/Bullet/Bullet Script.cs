@@ -7,12 +7,18 @@ using System.Numerics;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+    
+    public float LifeTime = 3f;
+    
     private Rigidbody2D Rigidbody2D;
     private UnityEngine.Vector2 Direction;
     public float Speed;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+
+
+        
     }
 
 
@@ -23,7 +29,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void Update()
     {
+        Destroy(gameObject, LifeTime);
         
     }
+
+   
 
 }

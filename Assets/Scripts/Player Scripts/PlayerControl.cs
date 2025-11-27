@@ -36,10 +36,7 @@ public class PlayerControler : MonoBehaviour
             rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        if (Input.GetKey(KeyCode.X))
-        {
-            Shoot();
-        }
+        
     }
     private void Shoot()
     {

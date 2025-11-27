@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class PlayerBulletFire : MonoBehaviour
 {
+    
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    
 
     void Update()
     {
@@ -13,6 +16,12 @@ public class PlayerBulletFire : MonoBehaviour
             {
                 Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             }
+
+            
         }
+
+        
     }
+
+    
 }
