@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerBulletFire : MonoBehaviour
 {
     
+    public AudioClip shootSFX;
     public GameObject bulletPrefab;
     public Transform firePoint;
 
@@ -15,6 +16,11 @@ public class PlayerBulletFire : MonoBehaviour
             if (bulletPrefab != null && firePoint != null)
             {
                 Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            }
+
+            if (shootSFX != null)
+            {
+                AudioManager.Instance.PlaySFX(shootSFX);
             }
 
             

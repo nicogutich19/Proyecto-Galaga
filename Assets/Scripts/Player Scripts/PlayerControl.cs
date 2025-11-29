@@ -3,10 +3,13 @@ using UnityEditorInternal;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerControler : MonoBehaviour
 {
+   
+
     public GameObject BulletPrefab;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -35,6 +38,8 @@ public class PlayerControler : MonoBehaviour
         {
             rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
         }
+
+        
 
         
     }
