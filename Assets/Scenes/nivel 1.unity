@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833564d562180d9428c7a2cfa7540bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootSFX: {fileID: 0}
   bulletPrefab: {fileID: 6706250640564487772, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
   firePoint: {fileID: 1864689378}
 --- !u!4 &1347920394 stripped
@@ -1127,7 +1128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 205352542726547657, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3747230097110102160, guid: de4aa4758d7292942ad83bf268387ee7, type: 3}
       propertyPath: LifeTime
