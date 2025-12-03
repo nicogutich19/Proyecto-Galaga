@@ -30,8 +30,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, LifeTime);
-        
     }
+
+        
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Si el objeto impactado tiene la etiqueta "Enemy"
+        if (collision.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject); // destruir enemigo
+            Destroy(gameObject);           // destruir bala
+        }
+    }
+
 
    
 
