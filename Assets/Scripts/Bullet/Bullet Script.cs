@@ -16,9 +16,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
-
-
-        
     }
 
 
@@ -35,11 +32,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Si el objeto impactado tiene la etiqueta "Enemy"
+        
         if (collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject); // destruir enemigo
-            Destroy(gameObject);           // destruir bala
+            Destroy(collision.gameObject); 
+            Destroy(gameObject);           
         }
     }
 

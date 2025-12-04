@@ -9,9 +9,8 @@ public class PlayerControler : MonoBehaviour
 {
    
 
-    public GameObject BulletPrefab;
+    public GameObject BulletPrefab;  
     public float moveSpeed = 5f;
-    public float jumpForce = 10f;
     public Transform groundCheck;
     public LayerMask groundLayer;
 
@@ -25,25 +24,18 @@ public class PlayerControler : MonoBehaviour
 
     void Update()
     {
-        // Movimiento horizontal
+        
         float moveInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new UnityEngine.Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // Verificar si está en el suelo
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
-        // Saltar
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.linearVelocity = new UnityEngine.Vector2(rb.linearVelocity.x, jumpForce);
-        }
-
-        
-
-        
     }
     private void Shoot()
     {
         Instantiate(BulletPrefab, transform.position, Quaternion.identity);
     }
+
+    
 }
