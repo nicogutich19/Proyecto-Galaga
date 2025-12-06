@@ -14,4 +14,9 @@ public class PSoundController : MonoBehaviour
     {
         audioSource.PlayOneShot(ShootSound);
     }
+
+    public void playReceiveDamage()
+    {
+        audioSource.PlayOneShot(ReceiveDamage);
+    }
 }
