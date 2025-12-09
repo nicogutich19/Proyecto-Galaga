@@ -35,23 +35,40 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Buscar las referencias UI en la nueva escena
-        pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
-        pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
-
-        Debug.Log($"Escena cargada: {scene.name}");
-        Debug.Log($"pauseMenuUI encontrado: {pauseMenuUI != null}");
-        Debug.Log($"pauseButton encontrado: {pauseButton != null}");
+        Debug.Log($"=== Escena cargada: {scene.name} ===");
+    
+        // Buscar las referencias UI en la nueva escena con manejo de errores
+        try
+        {
+            pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
+            Debug.Log($"pauseMenuUI encontrado: {pauseMenuUI.name}");
+        }
+        catch (UnityException)
+        {
+            Debug.LogWarning($"No se encontró objeto con tag 'PauseMenu' en {scene.name}");
+            pauseMenuUI = null;
+        }
+    
+        try
+        {
+            pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
+            Debug.Log($"pauseButton encontrado: {pauseButton.name}");
+        }
+        catch (UnityException)
+        {
+            Debug.LogWarning($"No se encontró objeto con tag 'PauseButton' en {scene.name}");
+            pauseButton = null;
+        }
 
         if (pauseButton != null)
             pauseButton.SetActive(true);
 
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
-        
-        // Reiniciar el estado de pausa
-        isPaused = false;
-        Time.timeScale = 1f;
+    
+            // Reiniciar el estado de pausa
+            isPaused = false;
+            Time.timeScale = 1f;
     }
 
     public void ChangeScene(string sceneName)
@@ -99,27 +116,50 @@ public class GameManager : MonoBehaviour
     }
 
     public void ShowPauseMenu()
+{
+    // Si las referencias son nulas, intentar encontrarlas
+    if (pauseMenuUI == null || pauseButton == null)
     {
-        // Si las referencias son nulas, intentar encontrarlas
-        if (pauseMenuUI == null || pauseButton == null)
+        try
         {
             pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
-            pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
-            Debug.LogWarning("Referencias de UI reasignadas en ShowPauseMenu.");
         }
-
+        catch (UnityException)
+        {
+            Debug.LogError("No se encontró ningún objeto con el tag 'PauseMenu'. Asegúrate de que el tag existe y está asignado.");
+            pauseMenuUI = null;
+        }
+        
+        try
+        {
+            pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
+        }
+        catch (UnityException)
+        {
+            Debug.LogError("No se encontró ningún objeto con el tag 'PauseButton'. Asegúrate de que el tag existe y está asignado.");
+            pauseButton = null;
+        }
+        
         if (pauseMenuUI != null && pauseButton != null)
         {
-            isPaused = true;
-            Time.timeScale = 0f;
-            pauseMenuUI.SetActive(true);
-            pauseButton.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("No se pudo mostrar el menú de pausa. Referencias nulas.");
+            Debug.LogWarning("Referencias de UI reasignadas en ShowPauseMenu.");
         }
     }
+
+    if (pauseMenuUI != null && pauseButton != null)
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        pauseMenuUI.SetActive(true);
+        pauseButton.SetActive(false);
+    }
+    else
+    {
+        Debug.LogError("No se pudo mostrar el menú de pausa. Referencias nulas.");
+        Debug.LogError($"pauseMenuUI: {(pauseMenuUI == null ? "NULL" : "OK")}");
+        Debug.LogError($"pauseButton: {(pauseButton == null ? "NULL" : "OK")}");
+    }
+}
 
     void Update()
     {

@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerControler : MonoBehaviour
 {
    
-
+    
     public GameObject BulletPrefab;  
     public float moveSpeed = 5f;
     public Transform groundCheck;
@@ -35,6 +35,7 @@ public class PlayerControler : MonoBehaviour
     private void Shoot()
     {
         Instantiate(BulletPrefab, transform.position, Quaternion.identity);
+        
     }
 
     
