@@ -1,37 +1,131 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] bool isPaused;
+    [SerializeField] private bool isPaused;
     public static GameManager Instance { get; private set; }
+
+    public GameObject pauseMenuUI;
+    public GameObject pauseButton;
+
+    private int enemiesDestroyed = 0;
+
     void Awake()
     {
-       if(Instance != null)
+        if (Instance != null)
         {
             Destroy(this.gameObject);
-        } 
+            return;
+        }
+        
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Buscar las referencias UI en la nueva escena
+        pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
+        pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
+
+        Debug.Log($"Escena cargada: {scene.name}");
+        Debug.Log($"pauseMenuUI encontrado: {pauseMenuUI != null}");
+        Debug.Log($"pauseButton encontrado: {pauseButton != null}");
+
+        if (pauseButton != null)
+            pauseButton.SetActive(true);
+
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(false);
+        
+        // Reiniciar el estado de pausa
+        isPaused = false;
+        Time.timeScale = 1f;
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void PauseGame()
+    {
+        if (!isPaused)
+            ShowPauseMenu();
         else
+            ResumeGame();
+    }
+
+    public void EnemyDestroyed()
+    {
+        enemiesDestroyed++;
+
+        if (enemiesDestroyed >= 3)
         {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            ChangeScene("nivel 2");
         }
     }
 
-    public void ChangeScene(string nivel1)
+    public void QuitGame()
     {
-        SceneManager.LoadScene("nivel 1");
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
     }
-    
-    public void PauseGame()
+
+    public void ResumeGame()
     {
-        isPaused = !isPaused;
-        if(isPaused)
+        if (pauseMenuUI == null || pauseButton == null)
         {
+            Debug.LogError("No se puede reanudar. Referencias nulas.");
+            return;
+        }
+
+        isPaused = false;
+        Time.timeScale = 1f;
+        pauseMenuUI.SetActive(false);
+        pauseButton.SetActive(true);
+    }
+
+    public void ShowPauseMenu()
+    {
+        // Si las referencias son nulas, intentar encontrarlas
+        if (pauseMenuUI == null || pauseButton == null)
+        {
+            pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
+            pauseButton = GameObject.FindGameObjectWithTag("PauseButton");
+            Debug.LogWarning("Referencias de UI reasignadas en ShowPauseMenu.");
+        }
+
+        if (pauseMenuUI != null && pauseButton != null)
+        {
+            isPaused = true;
             Time.timeScale = 0f;
+            pauseMenuUI.SetActive(true);
+            pauseButton.SetActive(false);
         }
         else
         {
-            Time.timeScale = 1f;
+            Debug.LogError("No se pudo mostrar el menú de pausa. Referencias nulas.");
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
     }
 }

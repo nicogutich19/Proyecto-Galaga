@@ -32,4 +32,6 @@ public class Enemie1 : MonoBehaviour
                 movimientoDerecha = true;
         }   }
     }
+
+    
 }

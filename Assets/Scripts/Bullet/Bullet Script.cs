@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using System.Numerics;
 
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -16,6 +15,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, LifeTime);
     }
 
 
@@ -26,7 +26,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void Update()
     {
-        Destroy(gameObject, LifeTime);
+        
     }
 
         
@@ -36,9 +36,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject); 
-            Destroy(gameObject);           
+            Destroy(gameObject);
+
+            GameManager.Instance.EnemyDestroyed();           
         }
     }
+
+    
 
 
    
