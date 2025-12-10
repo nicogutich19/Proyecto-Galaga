@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -22,29 +19,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.linearVelocity = UnityEngine.Vector2.up * Speed;
-    }
-
-    void Update()
-    {
-        
-    }
-
-        
+    }        
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject); 
-            Destroy(gameObject);
-
-            GameManager.Instance.EnemyDestroyed();           
+            Destroy(gameObject);     
         }
     }
-
-    
-
-
-   
-
 }

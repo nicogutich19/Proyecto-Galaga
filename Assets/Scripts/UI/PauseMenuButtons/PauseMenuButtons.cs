@@ -1,40 +1,46 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PauseMenuButtons : MonoBehaviour
+public class MenuPausa : MonoBehaviour
 {
-    public void ResumeGame()
+    [SerializeField] private GameObject botonPausa;
+    [SerializeField] private GameObject menuPausa;
+    private bool juegoPausado = false;
+    public void Update()
     {
-        if (GameManager.Instance != null)
+        if(Input.GetKeyDown(KeyCode.P))
+        if (juegoPausado)
         {
-            GameManager.Instance.ResumeGame();
+            Reanudar();
         }
         else
         {
-            Debug.LogError("GameManager.Instance es null!");
+            Pausa();
         }
     }
-
-    public void QuitGame()
+    public void Pausa()
     {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.QuitGame();
-        }
-        else
-        {
-            Debug.LogError("GameManager.Instance es null!");
-        }
+        juegoPausado = true;
+        Time.timeScale = 0f;
+        botonPausa.SetActive(false);
+        menuPausa.SetActive(true);
+
     }
-
-    public void PauseGame()
+    public void Reanudar()
     {
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.PauseGame();
-        }
-        else
-        {
-            Debug.LogError("GameManager.Instance es null!");
-        }
+        juegoPausado = false;
+        Time.timeScale = 1f;
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
+    }
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void cerrar()
+    {
+        Debug.Log("Cerrando el Juego, Gracias por Jugar...");
+        Application.Quit();
     }
 }
