@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance{get; private set;}
+    private int EnemiesKilled = 0;
     [SerializeField] bool isPaused;
     void Awake() 
     {
@@ -22,20 +23,45 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(nameNewScene); 
     }
     private bool sceneChanged = false; // evita recargas repetidas
-    void Update()
-    {
-        if (isPaused || sceneChanged) return;
+      
 
-        // Busca todos los objetos con el tag "enemy"
-        if (GameObject.FindGameObjectsWithTag("enemy").Length == 0)
+    public void EnemyKilled()
+    {
+        EnemiesKilled++;
+
+        Debug.Log("Enemies Killed: " + EnemiesKilled);
+
+        if (SceneManager.GetActiveScene().buildIndex == 1 && EnemiesKilled >= 3)
         {
-            sceneChanged = true;
-            // Cambia a la siguiente escena en el Build Settings
-            int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextIndex < SceneManager.sceneCountInBuildSettings)
-                SceneManager.LoadScene(nextIndex);
-            else
-                Debug.Log("No hay más escenas en Build Settings para cargar.");
-        }
-    }   
+            LoadNextLevel();
+            EnemiesKilled = 0;
+        } 
+
+        if (SceneManager.GetActiveScene().buildIndex == 2 && EnemiesKilled >= 7)
+        {
+            ShowWinScreen();
+            EnemiesKilled = 0;
+        } 
+    }
+
+    public void PlayerDied()
+    {
+        Debug.Log("Game Over");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
+        EnemiesKilled = 0;
+    }
+
+    void LoadNextLevel()
+    {
+        SceneManager.LoadScene(2);
+        EnemiesKilled = 0;
+    }
+
+    void ShowWinScreen()
+    {
+        Debug.Log("¡Has ganado!");
+        SceneManager.LoadScene("End Game"); // crea una escena llamada "Win"
+        EnemiesKilled = 0;
+    }
 }

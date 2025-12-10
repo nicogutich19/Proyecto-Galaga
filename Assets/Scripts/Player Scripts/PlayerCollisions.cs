@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    [SerializeField] private AudioClip deathSFX;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -13,6 +14,9 @@ public class PlayerCollision : MonoBehaviour
     void Die()
     {
         Debug.Log("Player ha muerto");
-        Destroy(gameObject); // o llamar a GameManager
+        AudioManager.Instance.PlaySFX(deathSFX);
+        Destroy(gameObject, 0.2f);
+        GameManager.instance.PlayerDied();
+        
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     
-    public float LifeTime = 3f;
+    public float LifeTime = 7f;
     
     private Rigidbody2D Rigidbody2D;
     private UnityEngine.Vector2 Direction;
@@ -26,7 +26,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject); 
-            Destroy(gameObject);     
+            Destroy(gameObject); 
+
+            GameManager.instance.EnemyKilled();
+
+            
         }
     }
 }

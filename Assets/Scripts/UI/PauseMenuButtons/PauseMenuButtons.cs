@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
+using System.Collections.Generic;   
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
@@ -17,6 +18,8 @@ public class MenuPausa : MonoBehaviour
         {
             Pausa();
         }
+
+        DontDestroyOnLoad(this.gameObject);
     }
     public void Pausa()
     {
@@ -33,11 +36,7 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
-    public void Restart()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
     public void cerrar()
     {
         Debug.Log("Cerrando el Juego, Gracias por Jugar...");
